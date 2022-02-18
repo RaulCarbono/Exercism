@@ -35,7 +35,8 @@ export const frontDoorResponse = (line) => line[0];
  * @param {string} word the letters you responded with before
  * @returns {string} the front door password
  */
-export function frontDoorPassword(word) {);
+export function frontDoorPassword(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
 /**
@@ -45,9 +46,7 @@ export function frontDoorPassword(word) {);
  * @param {string} line
  * @returns {string}
  */
-export function backDoorResponse(line) {
-    throw new Error('Implement the backDoorResponse function');
-}
+export const backDoorResponse = (line) => line.trim().substr;
 
 /**
  * Format the password for the back door, given the response
@@ -56,4 +55,4 @@ export function backDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the back door password
  */
-export const backDoorPassword = (word) => 'Hello ${word}'
+export const backDoorPassword = (word) => 'Hello ${}'
