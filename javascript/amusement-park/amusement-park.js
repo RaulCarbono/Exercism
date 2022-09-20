@@ -10,12 +10,11 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-  const visitor = {
-    name: name,
-    age: age,
-    ticketId: ticketId,
+  return {
+    name,
+    age,
+    ticketId,
   };
-  return visitor;
 }
 
 /**
@@ -58,10 +57,7 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  if (tickets[ticketId] !== null && tickets[ticketId] !== undefined)
-    return `${tickets[ticketId]}`;
-
-  return "invalid ticket !!!";
+  return tickets[ticketId] ?? "invalid ticket !!!";
 }
 
 /**
