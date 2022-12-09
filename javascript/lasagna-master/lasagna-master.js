@@ -11,16 +11,27 @@
  * }
  */
 
-export function cookingStatus(time){
-    if(time !== 0 && time !== undefined) 
-    return 'Not done, please wait.'
-    if (time === 0)
-    return 'Lasagna is done.'
-    if (time === undefined)
-    return 'You forgot to set the timer.'
+export function cookingStatus(n) {
+    if (n > 0) {
+    return "Not done, please wait."
+    }
+    if (n === 0){ 
+    return "Lasagna is done."
+    }
+    if (n === undefined){
+        return "You forgot to set the timer."
+    }
 }
 
-export function preparationTime (layers, time) {
- if (time === undefined) time = 2
- return layers.length * time
+export function preparationTime (layer, time=2){
+    if (layer.length === 0 && time === 2  ){
+        return (layer.length * time)
+    }
+    if (layer.length !== 0 && time){
+        return (layer.length * time)
+    }
+}
+
+export function quantities (layer, time){
+
 }
