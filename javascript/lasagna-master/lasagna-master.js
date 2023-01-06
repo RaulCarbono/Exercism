@@ -32,6 +32,35 @@ export function preparationTime (layer, time=2){
     }
 }
 
-export function quantities (layer, time){
+export function quantities (layer){
+let sauce = 0 
+let noodles = 0
+let object={}
 
+layer.forEach(element => {
+    if (element == 'sauce') {
+        sauce += 0.2
+    }
+    if (element === 'noodles') {
+        noodles += 50
+    }
+    
+});
+    object.sauce = sauce
+    object.noodles = noodles
+    return(object)
+}
+
+export function addSecretIngredient (list, listTwo){
+
+list.forEach(e => {
+    if (e == e.list ){
+        console.log(e)
+    }
+})
+listTwo.forEach(e => {
+    if (e == e.list) {
+        console.log(e)
+    }
+})
 }
