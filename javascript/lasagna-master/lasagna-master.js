@@ -53,14 +53,10 @@ layer.forEach(element => {
 
 export function addSecretIngredient (list, listTwo){
 
-list.forEach(e => {
-    if (e == e.list ){
-        console.log(e)
+    for (let i = 0; i < list.length; i++){
+        let element = list[i] 
+        if (list[i] !== listTwo[-i] ){
+            listTwo.push(element)
+        }
     }
-})
-listTwo.forEach(e => {
-    if (e == e.list) {
-        console.log(e)
-    }
-})
 }
