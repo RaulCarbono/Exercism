@@ -30,9 +30,18 @@ export class Position{
 
 export class ProgramWindow {
     constructor() {
-        this.screenSize = Size(800, 600)
-        this.size = Size()
-       
+       this.screenSize = new Size(800, 600)
+       this.size =  new Size()
+       this.position = new Position 
+    }
+    resize(newSize) {
+        this.size = newSize 
+        if (newSize.width <= 0 && newSize.height <= 0 ){
+            this.size = new Size(1,1)
+        }
+    }
+    move(Position){
+        
     }
 }
 

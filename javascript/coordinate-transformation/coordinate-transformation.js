@@ -15,10 +15,9 @@
  *  translated coordinate pair in the form [x, y]
  */
 export function translate2d(dx, dy) {
-  function translate(x, y) {
+  return function (x, y) {
     return [dx + x, dy + y];
-  }
-  return translate;
+  };
 }
 
 /**
@@ -32,10 +31,9 @@ export function translate2d(dx, dy) {
  *  scaled coordinate pair in the form [x, y]
  */
 export function scale2d(sx, sy) {
-  function scaled(x, y) {
+  return function (x, y) {
     return [sx * x, sy * y];
-  }
-  return scaled;
+  };
 }
 
 /**
@@ -49,10 +47,9 @@ export function scale2d(sx, sy) {
  *  transformed coordinate pair in the form [x, y]
  */
 export function composeTransform(f, g) {
-  function compose(x, y) {
+  return function (x, y) {
     return g(f(x, y)[0], f(x, y)[1]);
-  }
-  return compose;
+  };
 }
 
 /**
