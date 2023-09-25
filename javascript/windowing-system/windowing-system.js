@@ -41,6 +41,11 @@ export class ProgramWindow {
         }
     }
     move(Position){
+        this.position = Position
+        if (Position.x <=0 && Position.y <= 0) {
+            this.position.x = 0
+            this.position.y = 0
+        }
         
     }
 }
